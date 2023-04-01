@@ -6,16 +6,16 @@ const App = () => {
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(true);
   
- const api_key="";
+ const API_KEY="";
  const changeFunction=(e)=>{
   setCategory(e.target.value);
  }
  useEffect(()=>{
    setLoading(true);
-   fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&apikey=${api_key}`).then(res=>res.json())
+   fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&apikey=${API_KEY}`).then(res=>res.json())
    .then((res)=>{
     setNewsData(res.articles)
-//     console.log(res);
+    console.log(res);
   }).then(()=>setLoading(false));
  },[category])
   return (
