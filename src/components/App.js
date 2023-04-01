@@ -24,7 +24,6 @@ const App = () => {
  useEffect(()=>
 
  {
-
    setLoading(true);
 
    fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&apikey=${API_KEY}`).then(res=>res.json())
