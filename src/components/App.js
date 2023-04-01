@@ -11,7 +11,7 @@ const App = () => {
 
   const [loading, setLoading] = useState(true);
 
- const API_KEY="a1741280db6dbc554c889a31544851b7";
+ const API_KEY="0e2cd1f39cd86a74200d0ec1f96ce4b0";
 
  const changeFunction=(e)=>
 
